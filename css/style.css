@@ -1,0 +1,171 @@
+:root {
+    --primary: #2e7d32; 
+    --accent: #e67e22; 
+    --gold: #f4b400;
+    --dark: #1a1a1a; 
+    --parchment: #f4f1ea;
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    background-color: #f4f1ea !important; 
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    color: #333; 
+}
+
+nav { 
+    background: var(--dark); 
+    color: white; 
+    padding: 15px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 4px solid var(--gold); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-weight: bold; 
+    transition: 0.3s; 
+}
+
+nav a:hover { 
+    color: var(--gold); 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    display: grid; 
+    grid-template-columns: 3fr 1fr; 
+    gap: 30px; 
+}
+
+@media (max-width: 900px) { 
+    .container { grid-template-columns: 1fr; } 
+}
+
+.archive-intro { 
+    text-align: center; 
+    grid-column: 1 / -1; 
+    margin-bottom: 40px; 
+}
+
+.underline { 
+    width: 80px; 
+    height: 5px; 
+    background: var(--gold); 
+    margin: 10px auto; 
+    border-radius: 2px; 
+}
+
+.stats-dashboard { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+    grid-column: 1 / -1; 
+    margin-bottom: 40px; 
+}
+
+.stat-card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 12px; 
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    border-top: 4px solid var(--primary); 
+}
+
+.library-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px; 
+}
+
+.library-card { 
+    background: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+    overflow: hidden; 
+    transition: 0.3s; 
+    position: relative; 
+    border: 1px solid #eee; 
+}
+
+.library-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+}
+
+.region-tag { 
+    position: absolute; 
+    top: 12px; 
+    left: 12px; 
+    background: var(--gold); 
+    color: black; 
+    padding: 5px 12px; 
+    border-radius: 6px; 
+    font-size: 0.75rem; 
+    font-weight: 900; 
+    z-index: 5; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+.card-img { 
+    height: 200px; 
+    width: 100%; 
+    object-fit: cover; 
+    background: #ddd; 
+    display: block; 
+}
+
+.card-content { 
+    padding: 20px; 
+}
+
+.sidebar { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    height: fit-content; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    position: sticky; 
+    top: 100px; 
+}
+
+.instrument-spotlight { 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px; 
+    margin-bottom: 15px; 
+}
+
+.btn-view { 
+    width: 100%; 
+    padding: 10px; 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: 0.3s; 
+}
+
+.btn-view:hover { 
+    background: #1b5e20; 
+}
+
+footer { 
+    background: var(--dark); 
+    color: white; 
+    text-align: center; 
+    padding: 40px; 
+    margin-top: 60px; 
+}
